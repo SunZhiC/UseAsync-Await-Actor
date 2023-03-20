@@ -14,6 +14,7 @@
 		362825C1285583EC00C82C43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362825C0285583EC00C82C43 /* Assets.xcassets */; };
 		362825C4285583EC00C82C43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362825C2285583EC00C82C43 /* LaunchScreen.storyboard */; };
 		362825CC2855840700C82C43 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362825CB2855840700C82C43 /* User.swift */; };
+		5FD017F029C876BF00591F65 /* DataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD017EF29C876BF00591F65 /* DataDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		362825C3285583EC00C82C43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		362825C5285583EC00C82C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		362825CB2855840700C82C43 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5FD017EF29C876BF00591F65 /* DataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				362825B9285583EA00C82C43 /* SceneDelegate.swift */,
 				362825BB285583EA00C82C43 /* ViewController.swift */,
 				362825CB2855840700C82C43 /* User.swift */,
+				5FD017EF29C876BF00591F65 /* DataDownloader.swift */,
 				362825BD285583EA00C82C43 /* Main.storyboard */,
 				362825C0285583EC00C82C43 /* Assets.xcassets */,
 				362825C2285583EC00C82C43 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				362825CC2855840700C82C43 /* User.swift in Sources */,
 				362825BC285583EA00C82C43 /* ViewController.swift in Sources */,
+				5FD017F029C876BF00591F65 /* DataDownloader.swift in Sources */,
 				362825B8285583EA00C82C43 /* AppDelegate.swift in Sources */,
 				362825BA285583EA00C82C43 /* SceneDelegate.swift in Sources */,
 			);

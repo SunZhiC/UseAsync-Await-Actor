@@ -23,6 +23,11 @@ class ViewController: UIViewController {
             let user = await mockRequest(request)
             print(user)
         }
+        
+        Task {
+            let user = await mockRequestWithActor(request)
+            print(user)
+        }
     }
 
     func makeRequest() -> URLRequest {
@@ -34,6 +39,10 @@ class ViewController: UIViewController {
         return request
     }
 
+    /// Mock request, old solution
+    /// - Parameters:
+    ///   - request: URL request
+    ///   - complete: User
     func mockRequest(_ request: URLRequest, complete: @escaping (User?) -> Void) {
         URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
@@ -47,6 +56,9 @@ class ViewController: UIViewController {
         }.resume()
     }
 
+    /// Mock request, new solution
+    /// - Parameter request: URL request
+    /// - Returns: User
     func mockRequest(_ request: URLRequest) async -> User? {
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
@@ -57,5 +69,20 @@ class ViewController: UIViewController {
             return nil
         }
     }
-}
 
+    
+    /// Mock request, define a DataDownloader
+    /// - Parameter request: URL request
+    /// - Returns: User
+    func mockRequestWithActor(_ request: URLRequest) async -> User? {
+        do {
+            let downloader = DataDownloader()
+            guard let data = try await downloader.download(request: request) else { return nil }
+            let user = try JSONDecoder().decode(User.self, from: data)
+            return user
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+}
